@@ -1,0 +1,197 @@
+/* Common styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0b579e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    font-size: 1.26rem;
+}
+
+.images img {
+    width: 100%;
+    border: 2px solid #0b579e;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #0b579e;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: auto;
+    top: 10px;
+    padding: 10px;
+    background-color: #0b579e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Nature & Wildlife page */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
+    grid-gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border: 2px solid #0b579e;
+    border-radius: 10px;
+}
+
+/* Food & Culture page */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex div {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+}
+
+.flex img {
+    width: 100%;
+    border: 2px solid #0b579e;
+    border-radius: 10px;
+}
+
+.flex img:nth-child(even) {
+    border-radius: 0 10px 10px 0;
+}
+
+.flex img:nth-child(odd) {
+    border-radius: 10px 0 0 10px;
+}
+
+.flex img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Add this to your css/style.css file */
+
+/* Style the navigation menu */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Style the hamburger icon */
+.navbar-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed; /* Fix the position of the icon */
+    top: 0; /* Place it at the top */
+    right: 0; /* Place it at the right side */
+    padding: 10px; /* Add some padding */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Use a media query to add responsive styles */
+@media screen and (max-width: 500px) {
+    nav li {
+        float: none;
+        width: 100%;
+    }
+
+    /* Show the hamburger icon */
+    .navbar-icon {
+        display: block;
+    }
+
+    /* Hide the navigation menu */
+    nav ul {
+        display: none;
+    }
+
+    /* Show the navigation menu when it's clicked */
+    nav ul.show {
+        display: block;
+    }
+        /* ...existing styles... */
+
+    /* Improve the image styling for mobile */
+    img {
+        max-width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Improve the paragraph styling for mobile */
+    p {
+        font-size: 18px; /* Increase font size for readability */
+        line-height: 1.6; /* Increase line height for readability */
+    }
+    .paragraphs p {
+        font-size: 16px; /* Decrease font size for mobile */
+    }
+
+    /* create distance between the images cover the full height relative to text in paragraph */
+    .images {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
